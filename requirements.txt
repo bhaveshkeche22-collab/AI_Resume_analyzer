@@ -7,3 +7,4 @@ python-docx
 scikit-learn
 pandas
 numpy
+pdfplumber
