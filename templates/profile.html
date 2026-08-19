@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="topbar"><h3>Profile</h3></div>
+<div class="card-panel profile-card">
+  <div class="avatar">{{ user.name[0].upper() }}</div>
+  <h3>{{ user.name }}</h3>
+  <p>{{ user.email }}</p>
+  <hr>
+  <p><b>Member Since:</b> {{ user.created_at.strftime('%d %b %Y') }}</p>
+  <p><b>Total Analyses:</b> {{ total }}</p>
+</div>
+{% endblock %}

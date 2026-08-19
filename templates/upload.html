@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="topbar"><h3>Upload Resume</h3></div>
+<div class="card-panel">
+  <div class="steps"><span class="active">1 Upload</span><span>2 Job Description</span><span>3 Review & Analyze</span></div>
+  <form method="post" action="{{ url_for('analyze') }}" enctype="multipart/form-data">
+    <div class="upload-box">
+      <div class="upload-icon">↑</div>
+      <h4>Upload your resume</h4>
+      <p class="muted">PDF only, maximum 5 MB</p>
+      <input class="form-control" type="file" name="resume" accept=".pdf" required>
+    </div>
+    <div class="mt-4">
+      <label class="form-label"><strong>Job Description (Optional)</strong></label>
+      <textarea class="form-control" name="job_description" rows="9" placeholder="Paste the job description here. Leave empty for resume-only analysis."></textarea>
+    </div>
+    <button class="btn btn-primary mt-4">Analyze Resume</button>
+  </form>
+</div>
+{% endblock %}
