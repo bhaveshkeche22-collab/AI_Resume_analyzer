@@ -1,9 +1,0 @@
-Flask
-Flask-SQLAlchemy
-gunicorn
-python-dotenv
-PyPDF2
-python-docx
-scikit-learn
-pandas
-numpy
